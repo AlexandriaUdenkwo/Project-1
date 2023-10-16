@@ -83,6 +83,8 @@ class boyer_lindquist_metric {
         // (-2.0*std::cos(th)*std::pow(std::sin(th), -3));
 
         //Mathematica's
+        g_00 = (2.0*M*r)/(pow(r,2)+pow(a,2)*pow(cos(th),2)) -1;
+        g_03 = -((2.0*M*a*r)/(pow(r,2) + pow(a,2)*pow(cos(th),2)))*pow(sin(th),2);
         g_11 = (pow(r,2) + pow(a,2)*pow(cos(th),2))/(pow(a,2) - 2.0*M*r + pow(r,2)); 
         g_22 = pow(r,2) + pow(a,2)*pow(cos(th),2);
         g_33 = (pow(sin(th),2)*(pow(pow(a,2) + pow(r,2),2) - pow(a,2)*(pow(a,2) - 2.0*M*r + pow(r,2))*pow(sin(th),2)))/

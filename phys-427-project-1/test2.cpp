@@ -118,7 +118,8 @@ int main(){
     double uphi0E = 1.0;
 
       //A stop condition
-    auto stopA = [r0A,rH,h](double x, const std::vector<double> &y) { return ((y[0] < r0A-h )|| (y[0]> r0A)) ; };
+    //auto stopA = [r0A,rH,h](double x, const std::vector<double> &y) { return ((y[0] < r0A-h )|| (y[0]> r0A)) ; };
+    auto stopA = [](double x, const std::vector<double> &y) { return x>3000 ; };
 
     //B stop condition
     auto stopB = [r0B,rH,h](double x, const std::vector<double> &y) { return ((y[0] < rH + h) || (y[0]> r0B)); };
